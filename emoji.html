@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji</title>
+    <link rel="stylesheet" href="emoji.css">
+</head>
+
+<body>
+    <div class="face">
+        <div class="lefteye">
+            <div class="eyeboal"></div>
+        </div>
+        <div class="righteye">
+            <div class="eyeboal"></div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+    <script>
+        var eyeballs = document.getElementsByClassName('eyeboal')
+   document.body.addEventListener('mousemove',()=>{
+  var x = event.clientX*100/window.innerWidth+"%";
+  var y =  event.clientY*100/window.innerHeight+"%";
+for (let i = 0; i < eyeballs?.length; i++) {
+    eyeballs[i].style.left =x
+    eyeballs[i].style.top = y
+    eyeballs[i].style.transform = "translate(-"+x+",-"+y+")";
+    
+}
+
+   })
+  console.log();
+    </script>
+
+</body>
+
+</html>
